@@ -6,9 +6,9 @@
   
 	async function savePassword() {
 	  const docRef = await addDoc(collection(db, "passwords"), {
-		password: password,
+		password: password, 
 	  });
-	  console.log("Document written with ID: ", docRef.id);
+	  console.log("записано");
 	}
   </script>
   
@@ -32,3 +32,4 @@
 	  cursor: pointer;
 	}
   </style>
+  
