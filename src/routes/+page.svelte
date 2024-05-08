@@ -1,7 +1,7 @@
 <script>
 	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/jgc.jpg';
-	import welcome_fallback from '$lib/images/jgc.jpg';
+	import welcome from '$lib/images/ct.jpg';
+	import welcome_fallback from '$lib/images/ct.jpg';
 </script>
 
 <svelte:head>
@@ -17,15 +17,8 @@
 				<img src={welcome_fallback} alt="Welcome" />
 			</picture>
 		</span>
-
-		to your new<br />SvelteKit app
 	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+<Counter />
 </section>
 
 <style>
