@@ -5,14 +5,18 @@
 	let password = '';
   
 	async function savePassword() {
-	  const docRef = await addDoc(collection(db, "passwords"), {
-		password: password, 
-	  });
-	  console.log("записано");
+	  try {
+		const docRef = await addDoc(collection(db, "passwords"), {
+		  password: password,
+		});
+		console.log("записано", docRef.id);
+	  } catch (error) {
+		console.error("Ошибка при сохранении пароля: ", error);
+	  }
 	}
   </script>
   
-  <input type="password" bind:value={password} placeholder="Введите ваш пароль">
+  <input type="password" bind:value={password} placeholder="Введите Ваш пароль">
   <button on:click={savePassword}>Сохранить пароль</button>
   
   <style>
@@ -32,4 +36,3 @@
 	  cursor: pointer;
 	}
   </style>
-  
