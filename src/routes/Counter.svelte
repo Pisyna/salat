@@ -1,8 +1,8 @@
 <script>
-  import { onMount } from 'svelte';
-  
-  import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { onMount } from 'svelte';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyBQWBP1WNqa7pLqa5jxsn1qgYoDgndmaGc",
