@@ -12,8 +12,8 @@
 	}
   </script>
   
-  <input type="password" bind:value={password} placeholder="Enter your password">
-  <button on:click={savePassword}>Save Password</button>
+  <input type="password" bind:value={password} placeholder="Введите ваш пароль">
+  <button on:click={savePassword}>Сохранить пароль</button>
   
   <style>
 	input {
