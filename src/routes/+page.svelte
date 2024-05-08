@@ -1,5 +1,7 @@
 <script>
 	import Counter from './Counter.svelte';
+	import welcome from '$lib/images/jgc.jpg';
+	import welcome_fallback from '$lib/images/jgc.jpg';
 </script>
 
 <svelte:head>
@@ -11,12 +13,17 @@
 	<h1>
 		<span class="welcome">
 			<picture>
-				<source srcset="lib\images/jgc.jpg" type="image/jpeg">
-				<img src="lib\images/jgc.jpg" alt="Description of the image">
+				<source srcset={welcome} type="image/jpg" />
+				<img src={welcome_fallback} alt="Welcome" />
 			</picture>
 		</span>
 
+		to your new<br />SvelteKit app
 	</h1>
+
+	<h2>
+		try editing <strong>src/routes/+page.svelte</strong>
+	</h2>
 
 	<Counter />
 </section>
