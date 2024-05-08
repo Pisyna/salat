@@ -13,7 +13,7 @@
 	<h1>
 		<span class="welcome">
 			<picture>
-				<source srcset={welcome} type="image/jpg" />
+				<source srcset={welcome} type="image/png" />
 				<img src={welcome_fallback} alt="Welcome" />
 			</picture>
 		</span>
@@ -37,15 +37,15 @@
 	.welcome {
 		display: block;
 		position: relative;
-		width: 100%;
+		width: 0;
 		height: 0;
 		padding: 0 0 calc(100% * 495 / 2048) 0;
 	}
 
 	.welcome img {
 		position: absolute;
-		width: 100%;
-		height: 100%;
+		width: 0;
+		height: 0;
 		top: 0;
 		display: block;
 	}
